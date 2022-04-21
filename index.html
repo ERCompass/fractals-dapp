@@ -1,1 +1,236 @@
+<head>
+    <title>Fractals</title>
+    <!-- <link rel="stylesheet" href="styles.css"></link> -->
+    <link rel="icon" type="image/x-icon" href="assets/fractals.png">
+</head>
 
+<body>
+
+    <img class="mainLogo highlight" src="assets/fractal.png">
+        <button id="usersWallet"class="menuButton highlight">Connect Wallet</button>
+
+            <div id="menuDiv" style="display: block" class="menuTable">
+               
+        <!-- REMEMBER TO ADD btn_menu, btn_menu, btn_menu for JS in CSS(or is it even needed?) -->
+
+            <button id="btn_menu" style="left: 100px" class="menuButton highlight">
+                <h2 id="menu_text" class="menuText highlighted">Dashboard</h2>
+                <img src="assets/dash.png" class="menuImage1">
+            </button>
+
+            <button id="btn_presale" style="left: 100px" class="menuButton highlight">
+                <h2 id="presale_text" class="menuText">Presale</h2>
+                <img src="assets/tag.png" class="menuImage2">
+            </button>
+
+            <button id="btn_chart" style="left: 260px" class="menuButton highlight">
+                <h2 class="menuText">FRC Chart</h2>
+                <img src="assets/chart.png" class="menuImage3">
+            </button>
+
+            <button id="btn_bogswap" style="left: 410px" class="menuButton highlight">
+                <h2 class="menuText">BogSwap</h2>
+                <img src="assets/bogswap.png" class="menuImage4">
+            </button>
+           
+            <hr>
+
+            <button id="btn_docs" style="left: 410px" class="menuButton highlight">
+                <h2 class="menuText">Docs</h2>
+                <img src="assets/docs.png" class="menuImage5">
+            </button>
+
+            <button id="btn_discord" style="left: 410px" class="menuButton highlight">
+                <h2 class="menuText">Discord</h2>
+                <img src="assets/discord.png" class="menuImage6">
+            </button>
+
+            <button id="btn_twitter" style="left: 410px" class="menuButton highlight">
+                <h2 class="menuText">Twitter</h2>
+                <img src="assets/twitter.png" class="menuImage7">
+            </button>
+
+            <!-- 
+            <button id="btn_coin" style="left: 410px" class="menuButton highlight">
+                <h2 class="menuText">Coingecko</h2>
+                <img src="assets/coin.png" class="menuImage7">
+            </button>
+            -->
+
+        </div>
+
+        <div id="pairAddressBlock">
+            <h6 class="pairAddress">FRC:&nbsp &nbsp
+                <a id="pair" class="pairHref" href="https://bscscan.com" target="_blank" rel="noopener noreferrer">
+                    0xd51...28b
+                </a>
+            </h6> 
+            <button class="copySquare highlight"  id="copyToken">
+                <img src="assets/copy.png" class="copyImage" id="tokenClipboard">
+                <img src="assets/tick_white.png" class="copyImageTick" id="tokenTick">
+            </button>
+
+            <h6 class="pairAddress ">Pair:&nbsp
+                <a id="pair" class="pairHref" href="https://bscscan.com" target="_blank" rel="noopener noreferrer">
+                    0xC39...fB7 
+                </a>
+            </h6>
+            <button class="copySquare highlight"  id="copyPair">
+                <img src="assets/copy.png" class="copyImage" id="pairClipboard">
+                <img src="assets/tick_white.png" class="copyImageTick" id="pairTick">
+            </button>
+        </div>
+   
+
+    <div id="homepage">
+
+            <!-- Tob 4 stats-->
+
+            <div class="fracTable" id="mcap-block">
+                <h4 id="mcapLabel">Market Cap</h4>
+                <h3 id="mcapValue">$0.00</h3>
+                <div id="mcapBoxSmall">
+                    <img src="assets/mcap.png" class="smallBoxImg">
+                </div>
+            </div>
+
+            <div class="fracTable" id="price-block">
+                <h4 id="priceLabel">FRC Price</h4>
+                <h3 id="priceValue">$0.00</h3>
+                <div id="priceBoxSmall">
+                    <img src="assets/price.png" class="smallBoxImg">
+                </div>
+            </div>
+
+            <div class="fracTable" id="torus-block">
+                <h4 id="torusLabel">Torus</h4>
+                <h3 id="torusValue">$0.00</h3>
+                <div id="torusBoxSmall">
+                    <img src="assets/torus.png" class="smallBoxImg">
+                </div>
+            </div>
+
+            <div class="fracTable" id="apy-block">
+                <h4 id="apyLabel">APY</h4>
+                <h3 id="apyValue">$0.00</h3>
+                <div id="apyBoxSmall">
+                    <img src="assets/apy.png" class="smallBoxImg">
+                </div>
+            </div>
+
+            <!--Account Table (Left)-->
+        <div class="accountStatsTable" style="display: block">
+
+            <div id="StatsBoxSmall" class="smallBoxImg">
+                <h5 id="StatsLabel">Account</h5>
+            </div>
+
+            <div id="lignBoxSmall" class="smallBoxImg"></div>
+
+            <div>
+                <h4 id="balanceLabel">Your Balance</h4>
+                <h3 id="balanceValue">$0.00</h3>
+            </div>
+            
+            <div>
+                <h4 id="daySinceFirstBuyLabel">Day Since First Buy</h4>
+                <h3 id="daySinceFirstBuyValue">$0.00</h3>
+            </div>
+
+            <div>
+                <h4 id="currentTaxLabel">Current Tax</h4>
+                <h3 id="currentTaxValue">$0.00</h3>
+            </div>
+        </div>
+
+        <!-- Statistics Table (right)-->
+        <div class="extraStatsTable" style="display: block">
+
+            <div id="StatsBoxSmall" class="smallBoxImg">
+                <h5 id="StatsLabel" >Statistics</h5>
+            </div>
+            <div id="lignBoxSmall1" class="smallBoxImg"></div>
+            
+            <div>
+                <h4 id="circulatingSupplyLabel">Circulating Supply</h4>
+                <h3 id="circulatingSupplyValue">$0.00</h3>
+            </div>
+
+            <div>
+                <h4 id="nextRebaseLabel">Next Rebase</h4>
+                <h3 id="rebaseCountdown">60:00</h3>
+            </div>
+            
+            <div>
+                <h4 id="dailyROILabel">Daily ROI%</h4>
+                <h3 id="dailyROIValue">1.0%</h3>
+            </div>
+
+            <div>
+                <h4 id="AntorusLabel">Antorus</h4>
+                <h3 id="AntorusValue">$0.00</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACCOUNT -->
+    <div id="presale" style="display: none;">
+        <div class="presaleTable" style="display: block">
+
+            <h5 id="titlePresale">Fractals Liquidity Raise</h5>
+           
+            <input type="text" id="contribution" placeholder="0.0">
+
+            <button id="btn-max" class="presaleButton1 highlight">Max</button>
+           
+            <button id="btn-contribute" class="presaleButton2 highlight">Contribute</button>
+           
+            <h3 id="error-message"></h3>
+            <!--Wallet not connected-->
+            
+            <h2 id="max-contribution1">Min  contribution: 1 AVAX</h2>
+            <h2 id="max-contribution2">Max contribution: 10 AVAX</h2>
+
+            <!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+            
+    </div>
+ 
+
+    <script src="obcss.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src="https://unpkg.com/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+    <script src="dapp.js"></script>
+</body>
